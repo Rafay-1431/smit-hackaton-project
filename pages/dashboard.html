@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #0B231D; -webkit-font-smoothing: antialiased; }
+        .bg-dark-teal { background-color: #0B231D; }
+        .bg-accent-teal { background-color: #168B75; }
+        .border-soft { border-color: #EBEBE6; }
+        .nav-border { border-bottom: 1px solid #EBEBE6; }
+
+        .stat-card {
+            transition: transform 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tag-pill {
+            font-size: 9px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 99px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="nav-border sticky top-0 bg-[#FAFAF8]/90 backdrop-blur-md z-50">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+            <div class="flex items-center gap-2 cursor-pointer">
+                <div class="bg-accent-teal text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">H</div>
+                <span class="font-bold text-lg tracking-tight">HelpHub AI</span>
+            </div>
+            <div class="hidden lg:flex items-center gap-6 text-[12px] font-bold">
+                <a href="/pages/dashboard.html" class="bg-[#E9EDE9] px-4 py-1.5 rounded-full text-dark-teal">Dashboard</a>
+                <a href="/pages/explore.html" class="text-gray-400 hover:text-dark-teal">Explore</a>
+                <a href="/pages/request.html" class="text-gray-400 hover:text-dark-teal">Create Request</a>
+                <a href="/pages/messages.html" class="text-gray-400 hover:text-dark-teal">Messages</a>
+                <a href="/pages/profile.html" class="text-gray-400 hover:text-dark-teal">Profile</a>
+                <div class="flex items-center gap-3 ml-4">
+                    <span class="text-gray-400">Notifications</span>
+                    <button class="bg-accent-teal text-white px-5 py-2 rounded-full shadow-lg shadow-teal-900/10" onclick="window.location.href='/pages/aicenter.html'">Open AI Center</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[1440px] mx-auto px-6 lg:px-12 py-10">
+        
+        <header class="bg-dark-teal rounded-[2.5rem] p-10 lg:p-14 text-white mb-10 relative overflow-hidden">
+            <div class="relative z-10">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-teal-400/60 uppercase block mb-4">Dashboard</span>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">Welcome back, Ayesha Khan.</h1>
+                <p class="text-gray-400 mt-4 max-w-2xl text-sm font-medium">
+                    Your command center for requests, AI insights, helper momentum, and live community activity.
+                </p>
+            </div>
+            <div class="absolute bottom-[-20%] right-[-5%] w-72 h-72 bg-accent-teal rounded-full blur-[120px] opacity-10"></div>
+        </header>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft stat-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-4">Trust Score</span>
+                <h3 class="text-4xl font-bold">92%</h3>
+                <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">Driven by solved requests and consistent support.</p>
+            </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft stat-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-4">Helping</span>
+                <h3 class="text-4xl font-bold">2</h3>
+                <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">Requests where you are currently listed as a helper.</p>
+            </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft stat-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-4">Open Requests</span>
+                <h3 class="text-4xl font-bold">2</h3>
+                <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">Community requests currently active across the feed.</p>
+            </div>
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft stat-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-4">AI Pulse</span>
+                <h3 class="text-4xl font-bold">1 trends</h3>
+                <p class="text-[11px] text-gray-400 mt-4 leading-relaxed">Trend count detected in the latest request activity.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-7 space-y-8">
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-2">Recent Requests</span>
+                        <h2 class="text-4xl font-bold max-w-md leading-tight">What the community needs right now</h2>
+                    </div>
+                    <button class="w-12 h-12 rounded-full border border-soft flex items-center justify-center font-bold text-[10px] text-dark-teal bg-white hover:bg-gray-50">Go to<br>feed</button>
+                </div>
+
+                <div class="bg-white p-8 rounded-[2.5rem] border border-soft hover:shadow-sm transition-all">
+                    <div class="flex gap-2 mb-4">
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Web Development</span>
+                        <span class="tag-pill bg-red-50 text-red-500">High</span>
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Open</span>
+                    </div>
+                    <h4 class="font-bold text-lg mb-3">Need help making my portfolio responsive before demo day</h4>
+                    <p class="text-xs text-gray-500 mb-5 leading-relaxed">My HTML/CSS portfolio breaks on tablets and I need layout guidance before tomorrow evening.</p>
+                    <div class="flex gap-2 mb-6">
+                        <span class="bg-[#F0F2F0] text-gray-500 text-[9px] font-bold px-3 py-1 rounded-md">HTML/CSS</span>
+                        <span class="bg-[#F0F2F0] text-gray-500 text-[9px] font-bold px-3 py-1 rounded-md">Responsive</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-2 border-t border-gray-50">
+                        <div class="text-[11px] text-gray-400 font-medium">Sara Noor • Karachi • 1 helper interested</div>
+                        <button class="px-5 py-2.5 rounded-xl border border-soft text-[11px] font-bold bg-[#FAFAF8]">Open details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 space-y-10">
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-soft shadow-sm">
+                    <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-6">AI Insights</span>
+                    <h3 class="text-2xl font-bold mb-8">Suggested actions for you</h3>
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center border-b border-gray-50 pb-4">
+                            <span class="text-[12px] text-gray-400">Most requested category</span>
+                            <span class="text-[12px] font-bold">Web Development</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-50 pb-4">
+                            <span class="text-[12px] text-gray-400">Your strongest trust driver</span>
+                            <span class="text-[12px] font-bold">Design Ally</span>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-[12px] text-gray-400">AI says you can mentor in</span>
+                            <p class="text-[12px] font-bold">HTML/CSS, UI/UX, Career Guidance, Figma</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-soft shadow-sm">
+                    <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-6">Notifications</span>
+                    <h3 class="text-2xl font-bold mb-8">Latest updates</h3>
+                    <div class="space-y-4">
+                        <div class="p-5 bg-[#FAFAF8] rounded-2xl border border-soft flex justify-between items-center">
+                            <div>
+                                <p class="text-[12px] font-bold">New helper matched to your request</p>
+                                <span class="text-[10px] text-gray-400">Match • 12 min ago</span>
+                            </div>
+                            <span class="text-[9px] font-bold text-red-400 bg-red-50 px-2 py-1 rounded">Unread</span>
+                        </div>
+                        <div class="p-5 bg-[#FAFAF8] rounded-2xl border border-soft flex justify-between items-center">
+                            <div>
+                                <p class="text-[12px] font-bold">Your trust score increased</p>
+                                <span class="text-[10px] text-gray-400">Reputation • 1 hr ago</span>
+                            </div>
+                            <span class="text-[9px] font-bold text-red-400 bg-red-50 px-2 py-1 rounded">Unread</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #0B231D; -webkit-font-smoothing: antialiased; }
+        .bg-dark-teal { background-color: #0B231D; }
+        .bg-accent-teal { background-color: #168B75; }
+        .border-soft { border-color: #EBEBE6; }
+        
+        input, select {
+            border: 1px solid #EBEBE6;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        input:focus, select:focus {
+            border-color: #168B75;
+            background-color: white !important;
+        }
+
+        .btn-translate {
+            transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-translate:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <nav class="max-w-[1440px] mx-auto w-full flex items-center justify-between px-6 lg:px-12 py-8">
+        <div class="flex items-center gap-2 cursor-pointer">
+            <div class="bg-accent-teal text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">H</div>
+            <span class="font-bold text-lg tracking-tight">HelpHub AI</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-[13px] font-semibold text-gray-500">
+            <a href="../index.html" class="hover:text-dark-teal">Home</a>
+            <a href="./explore.html" class="hover:text-dark-teal">Explore</a>
+            <a href="./leaderborad.html" class="hover:text-dark-teal">Leaderboard</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-12">
+        <div class="max-w-[1100px] w-full grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <div class="bg-[#0B231D] rounded-[3rem] p-10 lg:p-14 text-white flex flex-col justify-center relative overflow-hidden">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-teal-400/60 uppercase mb-6 block">Community Access</span>
+                <h1 class="text-5xl md:text-6xl font-bold leading-[1.1] mb-8">Enter the support network.</h1>
+                <p class="text-gray-400 text-sm md:text-base mb-10 leading-relaxed">
+                    Choose a demo identity, set your role, and jump into a multi-page product flow designed for asking, offering, and tracking help with a premium interface.
+                </p>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <span class="text-teal-400 mt-1">•</span> Role-based entry for Need Help, Can Help, or Both
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-teal-400 mt-1">•</span> Direct path into dashboard, requests, AI Center, and community feed
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-teal-400 mt-1">•</span> Persistent demo session powered by LocalStorage
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white rounded-[3rem] p-10 lg:p-14 border border-soft shadow-sm flex flex-col justify-center">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-accent-teal uppercase mb-6 block">Login / Signup</span>
+                <h2 class="text-4xl font-bold mb-10 leading-tight">Authenticate your community profile</h2>
+                
+                <form class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Select demo user</label>
+                        <select class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold appearance-none cursor-pointer">
+                            <option>Ayesha Khan</option>
+                            <option>Hassan Ali</option>
+                            <option>Sara Noor</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Role selection</label>
+                        <select class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold appearance-none cursor-pointer">
+                            <option>Both</option>
+                            <option>Need Help</option>
+                            <option>Can Help</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Email</label>
+                            <input type="email" value="community@helphub.ai" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Password</label>
+                            <input type="password" value="........" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="button" onclick="window.location.href='dashboard.html'" class="w-full bg-accent-teal text-white py-4 rounded-2xl font-bold btn-translate shadow-lg shadow-teal-900/10 text-sm">
+                            Continue to dashboard
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-10 text-center text-[10px] text-gray-400 font-bold tracking-[0.3em] uppercase">
+        HelpHub AI • Premium Authentication Experience
+    </footer>
+
+</body>
+</html>

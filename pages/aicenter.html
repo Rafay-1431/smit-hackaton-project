@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - AI Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #0B231D; -webkit-font-smoothing: antialiased; }
+        .bg-dark-teal { background-color: #0B231D; }
+        .bg-accent-teal { background-color: #168B75; }
+        .border-soft { border-color: #EBEBE6; }
+        .nav-border { border-bottom: 1px solid #EBEBE6; }
+        
+        .ai-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .ai-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .tag-pill {
+            font-size: 9px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 99px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="nav-border sticky top-0 bg-[#FAFAF8]/90 backdrop-blur-md z-50">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='../index.html'">
+                <div class="bg-accent-teal text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">H</div>
+                <span class="font-bold text-lg tracking-tight">HelpHub AI</span>
+            </div>
+            <div class="hidden lg:flex gap-8 text-[13px] font-semibold">
+                <a href="../index.html" class="text-gray-400 hover:text-dark-teal">Dashboard</a>
+                <a href="./request.html" class="text-gray-400 hover:text-dark-teal">Create Request</a>
+                <a href="./aicenter.html" class="bg-[#E9EDE9] px-4 py-1.5 rounded-full text-dark-teal">AI Center</a>
+            </div>
+            <button class="bg-accent-teal text-white px-6 py-2 rounded-full text-xs font-bold shadow-lg shadow-teal-900/10">Join Community</button>
+        </div>
+    </nav>
+
+    <main class="max-w-[1200px] mx-auto px-6 py-12">
+        <header class="bg-dark-teal rounded-[2.5rem] p-10 lg:p-16 text-white mb-12 relative overflow-hidden">
+            <div class="relative z-10">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-teal-400/60 uppercase block mb-4">AI Center</span>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
+                    See what the platform intelligence is noticing.
+                </h1>
+                <p class="text-gray-400 mt-6 max-w-2xl text-sm md:text-base leading-relaxed">
+                    AI-like insights summarize demand trends, helper readiness, urgency signals, and request recommendations.
+                </p>
+            </div>
+            <div class="absolute top-[-20%] right-[-10%] w-72 h-72 bg-accent-teal rounded-full blur-[100px] opacity-10"></div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft shadow-sm ai-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-6">Trend Pulse</span>
+                <h3 class="text-2xl font-bold mb-4">Web Development</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">Most common support area based on active community requests.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft shadow-sm ai-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-6">Urgency Watch</span>
+                <h3 class="text-5xl font-bold mb-4">2</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">Requests currently flagged high priority by the urgency detector.</p>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2.5rem] border border-soft shadow-sm ai-card">
+                <span class="text-[10px] font-bold text-accent-teal uppercase tracking-widest block mb-6">Mentor Pool</span>
+                <h3 class="text-5xl font-bold mb-4">2</h3>
+                <p class="text-xs text-gray-500 leading-relaxed">Trusted helpers with strong response history and contribution signals.</p>
+            </div>
+        </div>
+
+        <section class="bg-white p-8 md:p-12 rounded-[3rem] border border-soft shadow-sm">
+            <span class="text-[10px] font-bold tracking-[0.2em] text-accent-teal uppercase block mb-6">AI Recommendations</span>
+            <h2 class="text-4xl font-bold mb-12">Requests needing attention</h2>
+
+            <div class="space-y-4">
+                <div class="p-8 bg-[#FAFAF8] rounded-[2rem] border border-soft hover:border-teal-200 transition-colors">
+                    <h4 class="font-bold text-sm md:text-base text-dark-teal mb-2">Need help</h4>
+                    <p class="text-xs text-gray-400 mb-6 font-medium">AI summary: Web Development request with high urgency. Best suited for members with relevant expertise.</p>
+                    <div class="flex gap-2">
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Web Development</span>
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">High</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-[#FAFAF8] rounded-[2rem] border border-soft hover:border-teal-200 transition-colors">
+                    <h4 class="font-bold text-sm md:text-base text-dark-teal mb-2">Need help making my portfolio responsive before demo day</h4>
+                    <p class="text-xs text-gray-400 mb-6 font-medium">Responsive layout issue with a short deadline. Best helpers are frontend mentors comfortable with CSS grids and media queries.</p>
+                    <div class="flex gap-2">
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Web Development</span>
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">High</span>
+                    </div>
+                </div>
+
+                <div class="p-8 bg-[#FAFAF8] rounded-[2rem] border border-soft hover:border-teal-200 transition-colors">
+                    <h4 class="font-bold text-sm md:text-base text-dark-teal mb-2">Looking for Figma feedback on a volunteer event poster</h4>
+                    <p class="text-xs text-gray-400 mb-6 font-medium">A visual design critique request where feedback on hierarchy, spacing, and messaging would create the most value.</p>
+                    <div class="flex gap-2">
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Design</span>
+                        <span class="tag-pill bg-[#E9F5F3] text-accent-teal">Medium</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center text-[10px] text-gray-400 font-bold tracking-[0.3em] uppercase">
+        HelpHub AI • Intelligent Community Insights
+    </footer>
+
+</body>
+</html>

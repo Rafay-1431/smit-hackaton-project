@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #0B231D; -webkit-font-smoothing: antialiased; }
+        .bg-dark-teal { background-color: #0B231D; }
+        .bg-accent-teal { background-color: #168B75; }
+        .border-soft { border-color: #EBEBE6; }
+        .nav-border { border-bottom: 1px solid #EBEBE6; }
+
+        input {
+            border: 1px solid #EBEBE6;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        input:focus {
+            border-color: #168B75;
+            background-color: white !important;
+        }
+
+        .btn-translate {
+            transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-translate:hover {
+            transform: translateY(-4px);
+        }
+
+        .tag-pill {
+            background-color: #E9F5F3;
+            color: #168B75;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 99px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="nav-border sticky top-0 bg-[#FAFAF8]/90 backdrop-blur-md z-50">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='../index.html'">
+                <div class="bg-accent-teal text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">H</div>
+                <span class="font-bold text-lg tracking-tight">HelpHub AI</span>
+            </div>
+            <div class="hidden lg:flex gap-8 text-[13px] font-semibold">
+                <a href="/pages/dashboard.html" class="text-gray-400 hover:text-dark-teal">Dashboard</a>
+                <a href="#" class="text-gray-400 hover:text-dark-teal">Onboarding</a>
+                <a href="/pages/profile.html" class="bg-[#E9EDE9] px-4 py-1.5 rounded-full text-dark-teal">Profile</a>
+            </div>
+            <div class="w-9 h-9 bg-gray-200 rounded-full overflow-hidden border border-soft cursor-pointer">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Ayesha" alt="User">
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-[1200px] mx-auto px-6 py-12">
+        <header class="bg-dark-teal rounded-[2.5rem] p-10 lg:p-16 text-white mb-10 relative overflow-hidden">
+            <div class="relative z-10">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-teal-400/60 uppercase block mb-4">Profile</span>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight">Ayesha Khan</h1>
+                <p class="text-gray-400 mt-4 text-sm font-medium">Both • Karachi</p>
+            </div>
+            <div class="absolute top-[-10%] right-[-5%] w-72 h-72 bg-accent-teal rounded-full blur-[120px] opacity-10"></div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-[3rem] border border-soft shadow-sm">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-accent-teal uppercase block mb-6">Public Profile</span>
+                <h2 class="text-4xl font-bold mb-12">Skills and reputation</h2>
+
+                <div class="space-y-10">
+                    <div class="flex justify-between items-center border-b border-gray-50 pb-6">
+                        <span class="text-sm text-gray-400 font-medium">Trust score</span>
+                        <span class="font-bold text-lg">100%</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-gray-50 pb-6">
+                        <span class="text-sm text-gray-400 font-medium">Contributions</span>
+                        <span class="font-bold text-lg">35</span>
+                    </div>
+
+                    <div>
+                        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block mb-4">Skills</span>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tag-pill">Figma</span>
+                            <span class="tag-pill">UI/UX</span>
+                            <span class="tag-pill">HTML/CSS</span>
+                            <span class="tag-pill">Career Guidance</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-[11px] font-bold text-gray-400 uppercase tracking-widest block mb-4">Badges</span>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tag-pill">Design Ally</span>
+                            <span class="tag-pill">Fast Responder</span>
+                            <span class="tag-pill">Top Mentor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 bg-white p-8 md:p-12 rounded-[3rem] border border-soft shadow-sm">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-accent-teal uppercase block mb-6">Edit Profile</span>
+                <h2 class="text-4xl font-bold mb-12 leading-tight">Update your identity</h2>
+                
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Name</label>
+                            <input type="text" value="Ayesha Khan" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Location</label>
+                            <input type="text" value="Karachi" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Skills</label>
+                        <input type="text" value="Figma, UI/UX, HTML/CSS, Career Guidance" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Interests</label>
+                        <input type="text" value="Hackathons, UI/UX, Community Building" class="w-full px-5 py-4 rounded-2xl bg-[#FAFAF8] text-sm font-semibold">
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" class="w-full bg-accent-teal text-white py-4 rounded-2xl font-bold btn-translate shadow-lg shadow-teal-900/10 text-sm">
+                            Save profile
+                        </button

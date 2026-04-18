@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpHub AI - Notifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #0B231D; -webkit-font-smoothing: antialiased; }
+        .bg-dark-teal { background-color: #0B231D; }
+        .bg-accent-teal { background-color: #168B75; }
+        .border-soft { border-color: #EBEBE6; }
+        .nav-border { border-bottom: 1px solid #EBEBE6; }
+
+        .notification-card {
+            transition: all 0.2s ease;
+        }
+        .notification-card:hover {
+            border-color: #168B75;
+            background-color: white;
+        }
+
+        .status-pill {
+            font-size: 10px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 12px;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="nav-border sticky top-0 bg-[#FAFAF8]/90 backdrop-blur-md z-50">
+        <div class="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12 py-5">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="bg-accent-teal text-white w-9 h-9 rounded-lg flex items-center justify-center font-bold">H</div>
+                <span class="font-bold text-lg tracking-tight">HelpHub AI</span>
+            </div>
+            <div class="hidden lg:flex gap-8 text-[13px] font-semibold">
+                <a href="/index.html" class="text-gray-400 hover:text-dark-teal">Dashboard</a>
+                <a href="./explore.html" class="text-gray-400 hover:text-dark-teal">Explore</a>
+                <a href="./notifications.html" class="bg-[#E9EDE9] px-4 py-1.5 rounded-full text-dark-teal">Notifications</a>
+            </div>
+            <button class="bg-accent-teal text-white px-6 py-2 rounded-full text-xs font-bold shadow-lg shadow-teal-900/10">Join Community</button>
+        </div>
+    </nav>
+
+    <main class="max-w-[1100px] mx-auto px-6 py-12">
+        <header class="bg-dark-teal rounded-[2.5rem] p-10 lg:p-16 text-white mb-10 relative overflow-hidden">
+            <div class="relative z-10">
+                <span class="text-[10px] font-bold tracking-[0.2em] text-teal-400/60 uppercase block mb-4">Notifications</span>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight max-w-4xl">
+                    Stay updated on requests, helpers, and trust signals.
+                </h1>
+                <p class="text-gray-400 mt-6 max-w-2xl text-sm md:text-base leading-relaxed">
+                    Track new matches, solved items, AI insights, and reputation changes in one place.
+                </p>
+            </div>
+            <div class="absolute bottom-[-10%] left-[-5%] w-64 h-64 bg-accent-teal rounded-full blur-[100px] opacity-10"></div>
+        </header>
+
+        <div class="bg-white p-8 md:p-12 rounded-[3rem] border border-soft shadow-sm">
+            <span class="text-[10px] font-bold tracking-[0.2em] text-accent-teal uppercase block mb-6">Live Updates</span>
+            <h2 class="text-4xl font-bold mb-10">Notification feed</h2>
+
+            <div class="space-y-4">
+                <div class="flex items-center justify-between p-7 bg-[#FAFAF8] rounded-[2rem] border border-soft notification-card">
+                    <div>
+                        <h4 class="font-bold text-sm md:text-base text-dark-teal">New helper matched to your responsive portfolio request</h4>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Match • 12 min ago</p>
+                    </div>
+                    <span class="status-pill bg-white text-dark-teal border border-soft">Unread</span>
+                </div>
+
+                <div class="flex items-center justify-between p-7 bg-[#FAFAF8] rounded-[2rem] border border-soft notification-card">
+                    <div>
+                        <h4 class="font-bold text-sm md:text-base text-dark-teal">Your trust score increased after a solved request</h4>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Reputation • 1 hr ago</p>
+                    </div>
+                    <span class="status-pill bg-white text-dark-teal border border-soft">Unread</span>
+                </div>
+
+                <div class="flex items-center justify-between p-7 bg-[#FAFAF8] rounded-[2rem] border border-soft notification-card">
+                    <div>
+                        <h4 class="font-bold text-sm md:text-base text-dark-teal">AI Center detected rising demand for interview prep</h4>
+                        <p class="text-xs text-gray-400 mt-1 font-medium">Insight • Today</p>
+                    </div>
+                    <span class="status-pill bg-white text-gray-400 border border-soft opacity-60">Read</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center text-[10px] text-gray-400 font-bold tracking-[0.3em] uppercase">
+        HelpHub AI • Real-time Activity Tracking
+    </footer>
+
+</body>
+</html>
